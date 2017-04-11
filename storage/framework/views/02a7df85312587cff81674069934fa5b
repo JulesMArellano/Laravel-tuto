@@ -1,0 +1,33 @@
+<?php $__env->startSection('title',$title); ?>;
+
+<?php $__env->startSection('content'); ?>
+
+<h1><?php echo e($title); ?></h1>
+
+<p>Jules Michaël Arellano</p>
+
+	<ul>
+		<?php $__empty_1 = true; foreach($numbers as $number): $__empty_1 = false; ?>
+			<li>
+				<?php echo e($number); ?>
+
+			</li>
+		<?php endforeach; if ($__empty_1): ?>
+			<li>
+				Aucun chiffre
+			</li>
+		<?php endif; ?>
+	</ul>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('sidebar'); ?>
+
+	@parent
+
+	<h3>A propos</h3>
+
+	<p>Side<p>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make("default", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

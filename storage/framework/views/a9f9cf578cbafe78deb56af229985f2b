@@ -1,0 +1,15 @@
+<?php $__env->startSection('content'); ?>
+
+<h1>Bravo !</h1>
+
+<p>
+	<a class="btn btn-primary" href="<?php echo e(action('LinksController@show', ['id' => $link->id])); ?>">
+
+		<?php echo e(route('link.show', $link)); ?>
+
+
+	</a>
+</p>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,14 @@
+<?php $__env->startSection('content'); ?>
+
+	<?php foreach($posts as $post): ?>
+
+		<h1><?php echo e($post->title); ?></h1>
+
+		<p><?php echo e($post->content); ?></p>
+
+		<p><a class="btn btn-primary" href="<?php echo e(route('news.edit',$post)); ?>">Editer</a></p>
+
+	<?php endforeach; ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
